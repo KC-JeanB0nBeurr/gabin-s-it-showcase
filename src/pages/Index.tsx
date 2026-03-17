@@ -1,16 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import HeroSection from "@/components/HeroSection";
+import CompetenceMatrix from "@/components/CompetenceMatrix";
+import RealisationsSection from "@/components/RealisationsSection";
+import VeilleSection from "@/components/VeilleSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <HeroSection />
+      <CompetenceMatrix activeFilter={activeFilter} onFilter={setActiveFilter} />
+      <RealisationsSection activeFilter={activeFilter} />
+      <VeilleSection />
+      <footer className="border-t border-border py-8">
+        <div className="container">
+          <p className="text-xs text-muted-foreground text-center">
+            © 2025 Gabin Donnier — BTS SIO SISR — Lycée Saint-Marc
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
