@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
 import { Realisation, competences } from "@/data/portfolio";
 
-const transition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] };
+const transition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] as const };
 
 const categoryColors: Record<string, string> = {
   formation: "bg-primary/10 text-primary",

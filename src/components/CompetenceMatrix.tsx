@@ -11,7 +11,7 @@ import {
 
 const icons = [Server, AlertTriangle, Globe, FolderKanban, MonitorCheck, GraduationCap];
 
-const transition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] };
+const transition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] as const };
 
 interface Props {
   activeFilter: string | null;
