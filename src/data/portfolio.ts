@@ -79,6 +79,11 @@ export const competences: Competence[] = [
   },
 ];
 
+export interface RealisationFile {
+  label: string;
+  url: string;
+}
+
 export interface Realisation {
   title: string;
   category: "formation" | "pro-1" | "pro-2";
@@ -87,7 +92,7 @@ export interface Realisation {
   competences: string[]; // ids
   tags: string[];
   period?: string;
-  files?: string[];
+  files?: RealisationFile[];
 }
 
 export const realisations: Realisation[] = [
@@ -101,7 +106,10 @@ export const realisations: Realisation[] = [
     competences: ["B1", "B5"],
     tags: ["SISR", "Spanning Tree", "Réseau"],
     period: "Sept 2024",
-    files: ["Schéma_Reseau.pdf", "Config_Switch.txt"],
+    files: [
+      { label: "Schéma Réseau", url: "/files/Projet1_schema.pkt" },
+      { label: "Cahier des charges", url: "/files/Cahier_des_charges_projet_1.odt" },
+    ],
   },
   {
     title: "Réseaux VPN et mise en place d'un serveur applicatif",
@@ -112,7 +120,10 @@ export const realisations: Realisation[] = [
     competences: ["B1", "B3", "B5"],
     tags: ["SISR", "VPN", "Serveur", "Applicatif"],
     period: "2024–2025",
-    files: ["Fichier_technique.pdf", "Schéma_Projet.pdf"],
+    files: [
+      { label: "Fiche technique", url: "/files/Fiche_technique_projet_2.odt" },
+      { label: "Schéma Projet", url: "/files/Projet2_schema.pkt" },
+    ],
   },
   // Milieu professionnel — 1ère année
   {

@@ -56,13 +56,15 @@ const RealisationCard = ({ r }: { r: Realisation }) => {
       {r.files && r.files.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {r.files.map((f) => (
-            <span
-              key={f}
-              className="inline-flex items-center gap-1 text-[11px] text-primary font-medium"
+            <a
+              key={f.url}
+              href={f.url}
+              download
+              className="inline-flex items-center gap-1 text-[11px] text-primary font-medium hover:underline"
             >
               <FileText className="h-3 w-3" />
-              {f}
-            </span>
+              {f.label}
+            </a>
           ))}
         </div>
       )}
