@@ -104,15 +104,15 @@ export const realisations: Realisation[] = [
     files: ["Schéma_Reseau.pdf", "Config_Switch.txt"],
   },
   {
-    title: "Petite baie transportable avec serveur applicatif via VPN",
+    title: "Réseaux VPN et mise en place d'un serveur applicatif",
     category: "formation",
     categoryLabel: "Projet Académique",
     description:
-      "Conception et déploiement d'une baie serveur portable connectant un serveur applicatif via un tunnel VPN sécurisé. Gestion complète de l'applicatif et de son déploiement.",
+      "Mise en place d'un réseau VPN sécurisé et déploiement d'un serveur applicatif. Gestion de l'applicatif sur le serveur et déploiement de l'applicatif côté serveur, avec production du fichier technique et du schéma du projet.",
     competences: ["B1", "B3", "B5"],
     tags: ["SISR", "VPN", "Serveur", "Applicatif"],
     period: "2024–2025",
-    files: ["Schéma_Baie.pdf", "Config_VPN.txt"],
+    files: ["Fichier_technique.pdf", "Schéma_Projet.pdf"],
   },
   // Milieu professionnel — 1ère année
   {
